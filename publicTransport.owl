@@ -1,0 +1,790 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/thibault/ontologies/2016/0/public-transport"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/thibault/ontologies/2016/0/public-transport">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#BusType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Route"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MetroType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GondolaType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_service"/>
+    </Declaration>
+    <Declaration>
+        <Datatype IRI="#customTime"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#id"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CableCarType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RailType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#text_color"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#longitude"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#color"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#long_name"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Transfer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Direction"/>
+    </Declaration>
+    <Declaration>
+        <Datatype IRI="#customDate"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Wednesday"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#end_date"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Saturday"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FunicularType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#min_transfer_time"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sunday"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TransferType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_transport_type"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_trip"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#part_of_route"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Day"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#inbound_travel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Trip"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_transfer_type"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_day"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TramType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Friday"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#name"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FerryType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TransportType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Monday"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Service"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ImpossibleTransfer"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#start_date"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#arrival_time"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#description"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#short_name"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_direction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StopTime"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#from"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#to"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ImmediateTransfer"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_stop"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#departure_time"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#outbound_travel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Thursday"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TimedTransfer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RecommendedTransfer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Stop"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tuesday"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#stop_sequence"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#latitude"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#BusType"/>
+        <Class IRI="#TransportType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CableCarType"/>
+        <Class IRI="#TransportType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FerryType"/>
+        <Class IRI="#TransportType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Friday"/>
+        <Class IRI="#Day"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FunicularType"/>
+        <Class IRI="#TransportType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GondolaType"/>
+        <Class IRI="#TransportType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ImmediateTransfer"/>
+        <Class IRI="#TransferType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ImpossibleTransfer"/>
+        <Class IRI="#TransferType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MetroType"/>
+        <Class IRI="#TransportType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Monday"/>
+        <Class IRI="#Day"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RailType"/>
+        <Class IRI="#TransportType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RecommendedTransfer"/>
+        <Class IRI="#TransferType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Saturday"/>
+        <Class IRI="#Day"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sunday"/>
+        <Class IRI="#Day"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Thursday"/>
+        <Class IRI="#Day"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TimedTransfer"/>
+        <Class IRI="#TransferType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TramType"/>
+        <Class IRI="#TransportType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tuesday"/>
+        <Class IRI="#Day"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wednesday"/>
+        <Class IRI="#Day"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#inbound_travel"/>
+        <Class IRI="#Direction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#outbound_travel"/>
+        <Class IRI="#Direction"/>
+    </SubClassOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#from"/>
+        <ObjectProperty IRI="#has_day"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#has_day"/>
+        <ObjectProperty IRI="#has_stop"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#to"/>
+        <ObjectProperty IRI="#from"/>
+    </SubObjectPropertyOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#from"/>
+        <Class IRI="#Transfer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_day"/>
+        <Class IRI="#Service"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_direction"/>
+        <Class IRI="#Trip"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_service"/>
+        <Class IRI="#Trip"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_stop"/>
+        <Class IRI="#StopTime"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_transfer_type"/>
+        <Class IRI="#Transfer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_transport_type"/>
+        <Class IRI="#Trip"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_trip"/>
+        <Class IRI="#StopTime"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#part_of_route"/>
+        <Class IRI="#Trip"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#to"/>
+        <Class IRI="#Transfer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#from"/>
+        <Class IRI="#Stop"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_day"/>
+        <Class IRI="#Day"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_direction"/>
+        <Class IRI="#Direction"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_service"/>
+        <Class IRI="#Service"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_stop"/>
+        <Class IRI="#Stop"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_transfer_type"/>
+        <Class IRI="#TransferType"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_transport_type"/>
+        <Class IRI="#TransportType"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_trip"/>
+        <Class IRI="#Trip"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#part_of_route"/>
+        <Class IRI="#Route"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#to"/>
+        <Class IRI="#Stop"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#end_date"/>
+        <DataProperty IRI="#start_date"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#long_name"/>
+        <DataProperty IRI="#name"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#short_name"/>
+        <DataProperty IRI="#name"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#start_date"/>
+        <DataProperty IRI="#id"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#text_color"/>
+        <DataProperty IRI="#color"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#arrival_time"/>
+        <Class IRI="#StopTime"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#color"/>
+        <Class IRI="#Route"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#departure_time"/>
+        <Class IRI="#StopTime"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#description"/>
+        <Class IRI="#Route"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#description"/>
+        <Class IRI="#Stop"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#end_date"/>
+        <Class IRI="#Service"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#id"/>
+        <Class IRI="#Route"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#id"/>
+        <Class IRI="#Service"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#id"/>
+        <Class IRI="#Stop"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#id"/>
+        <Class IRI="#Trip"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#latitude"/>
+        <Class IRI="#Stop"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#long_name"/>
+        <Class IRI="#Route"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#longitude"/>
+        <Class IRI="#Stop"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#min_transfer_time"/>
+        <Class IRI="#Transfer"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#name"/>
+        <Class IRI="#Stop"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#short_name"/>
+        <Class IRI="#Route"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#short_name"/>
+        <Class IRI="#Trip"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#start_date"/>
+        <Class IRI="#Service"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#stop_sequence"/>
+        <Class IRI="#StopTime"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#text_color"/>
+        <Class IRI="#Route"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#arrival_time"/>
+        <Datatype IRI="#customTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#color"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#departure_time"/>
+        <Datatype IRI="#customTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#description"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#end_date"/>
+        <Datatype IRI="#customDate"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#id"/>
+        <Datatype abbreviatedIRI="xsd:unsignedLong"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#latitude"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#long_name"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#longitude"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#min_transfer_time"/>
+        <Datatype abbreviatedIRI="xsd:positiveInteger"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#name"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#short_name"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#start_date"/>
+        <Datatype IRI="#customDate"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#stop_sequence"/>
+        <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#text_color"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#BusType</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Bus. Used for short- and long-distance bus routes.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CableCarType</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Cable car. Used for street-level cable cars where the cable runs beneath the car.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Day</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Specifies days of a week.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Direction</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Indicates the direction of travel for a trip.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#FerryType</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Ferry. Used for short- and long-distance boat service.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#FunicularType</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Funicular. Any rail system designed for steep inclines.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#GondolaType</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Gondola, Suspended cable car. Typically used for aerial cable cars where the car is suspended from the cable.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ImmediateTransfer</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This is a timed transfer point between two routes. The departing vehicle is expected to wait for the arriving one, with sufficient time for a passenger to transfer between routes.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ImpossibleTransfer</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Transfers are not possible between routes at this location.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MetroType</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Subway, Metro. Any underground rail system within a metropolitan area.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#RailType</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Rail. Used for intercity or long-distance travel.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#RecommendedTransfer</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This is a recommended transfer point between two routes.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Route</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Transit routes. A route is a group of trips that are displayed to riders as a single service.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Service</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Dates for service using a weekly schedule. Specify when service starts and ends, as well as days of the week where service is available.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Stop</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Individual locations where vehicles pick up or drop off passengers.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#StopTime</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Times that a vehicle arrives at and departs from individual stops for each trip.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TimedTransfer</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This transfer requires a minimum amount of time between arrival and departure to ensure a connection. The time required to transfer is specified by min_transfer_time.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TramType</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tram, Streetcar, Light rail. Any light rail or street level system within a metropolitan area.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Transfer</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Rules for making connections at transfer points between routes.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TransferType</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Specifies the type of connection for the specified transfer.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TransportType</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Describes the type of transportation used on a route.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Trip</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Trips for each route. A trip is a sequence of two or more stops that occurs at specific time.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#arrival_time</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The arrival_time specifies the arrival time at a specific stop for a specific trip on a route. The time is measured from &quot;noon minus 12h&quot; (effectively midnight, except for days on which daylight savings time changes occur) at the beginning of the service date. For times occurring after midnight on the service date, enter the time as a value greater than 24:00:00 in HH:MM:SS local time for the day on which the trip schedule begins. If you don&apos;t have separate times for arrival and departure at a stop, enter the same value for arrival_time and departure_time.
+
+If this stop isn&apos;t a time point, use an empty string value for the arrival_time and departure_time fields. Stops without arrival times will be scheduled based on the nearest preceding timed stop. To ensure accurate routing, please provide arrival and departure times for all stops that are time points. Do not interpolate stops.
+
+You must specify arrival and departure times for the first and last stops in a trip.
+
+Times must be eight digits in HH:MM:SS format (H:MM:SS is also accepted, if the hour begins with 0). Do not pad times with spaces.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#color</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">In systems that have colors assigned to routes, the route_color field defines a color that corresponds to a route. The color must be provided as a six-character hexadecimal number, for example, 00FFFF. If no color is specified, the default route color is white (FFFFFF).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#departure_time</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The departure_time specifies the departure time from a specific stop for a specific trip on a route. The time is measured from &quot;noon minus 12h&quot; (effectively midnight, except for days on which daylight savings time changes occur) at the beginning of the service date. For times occurring after midnight on the service date, enter the time as a value greater than 24:00:00 in HH:MM:SS local time for the day on which the trip schedule begins. If you don&apos;t have separate times for arrival and departure at a stop, enter the same value for arrival_time and departure_time.
+
+If this stop isn&apos;t a time point, use an empty string value for the arrival_time and departure_time fields. Stops without arrival times will be scheduled based on the nearest preceding timed stop. To ensure accurate routing, please provide arrival and departure times for all stops that are time points. Do not interpolate stops.
+
+You must specify arrival and departure times for the first and last stops in a trip.
+
+Times must be eight digits in HH:MM:SS format (H:MM:SS is also accepted, if the hour begins with 0). Do not pad times with spaces.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#description</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Contains a description of the instance. Please provide useful, quality information.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#end_date</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The end_date field contains the end date for the service. This date is included in the service interval.
+
+The end_date field&apos;s value should be in YYYYMMDD format.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#from</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Identifies a stop where a connection between routes begins.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#has_day</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A service is available for specified days.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#has_direction</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Indicates the direction of travel for a trip.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#has_service</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Identifies a set of dates when service is available for one or more routes.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#has_stop</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Uniquely identifies a stop. Multiple routes may use the same stop.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#has_transfer_type</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Specifies the type of connection for the specified transfer.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#has_transport_type</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Describes the type of transportation used on a route.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#has_trip</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Identifies a trip.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#id</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Contains an ID that uniquely identifies the instance.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#inbound_travel</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Travel in the opposite direction.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#latitude</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Contains the latitude of a stop or station. The field value must be a valid WGS 84 latitude.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#long_name</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Contains the full name of a route. This name is generally more descriptive than the short_name.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#longitude</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Contains the longitude of a stop or station. The field value must be a valid WGS 84 longitude value from -180 to 180.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#min_transfer_time</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">When a connection between routes requires an amount of time between arrival and departure (TransferType=TimedTransfer), the min_transfer_time field defines the amount of time that must be available in an itinerary to permit a transfer between routes at these stops. The min_transfer_time must be sufficient to permit a typical rider to move between the two stops, including buffer time to allow for schedule variance on each route.
+
+The min_transfer_time value must be entered in seconds.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#name</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Please use a name that people will understand in the local and tourist vernacular.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#outbound_travel</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Travel in one direction.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#part_of_route</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Identifies a route.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#start_date</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The start_date field contains the start date for the service.
+
+The start_date field&apos;s value should be in YYYYMMDD format.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#stop_sequence</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The stop_sequence field identifies the order of the stops for a particular trip. The values for stop_sequence must be non-negative integers, and they must increase along the trip.
+
+For example, the first stop on the trip could have a stop_sequence of 1, the second stop on the trip could have a stop_sequence of 23, the third stop could have a stop_sequence of 40, and so on.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#text_color</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Can be used to specify a legible color to use for text drawn against a background of route color. The color must be provided as a six-character hexadecimal number, for example, FFD700.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#to</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Identifies a stop or station where a connection between routes ends.</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.1.3.20151118-2017) https://github.com/owlcs/owlapi -->
+
