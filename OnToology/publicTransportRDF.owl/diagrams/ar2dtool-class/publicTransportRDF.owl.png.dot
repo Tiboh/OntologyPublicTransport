@@ -1,0 +1,53 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "public-transport:TransportType" "public-transport:Thursday" "public-transport:Transfer" "public-transport:Day" "public-transport:ImmediateTransfer" "public-transport:Service" "public-transport:Direction" "public-transport:TransferType" "public-transport:Sunday" "public-transport:Friday" "public-transport:Monday" "public-transport:StopTime" "public-transport:Stop" "public-transport:Saturday" "public-transport:Trip" "public-transport:Wednesday" "public-transport:Tuesday" "public-transport:Route" ; /*classes style*/
+	"public-transport:Olympiades-Bibliotheque" -> "public-transport:Bibliotheque-Francois_Mitterrand" [ label = "public-transport:to" ];
+	"public-transport:Olympiades-Bibliotheque" -> "public-transport:ImmediateTransfer" [ label = "public-transport:has_transfer_type" ];
+	"public-transport:Olympiades-Bibliotheque" -> "public-transport:Olympiades" [ label = "public-transport:from" ];
+	"http://www.semanticweb.org/thibault/ontologies/2016/0/public-transport#10000872820081804" -> "http://www.semanticweb.org/thibault/ontologies/2016/0/public-transport#370" [ label = "public-transport:has_stop" ];
+	"public-transport:Normal" -> "public-transport:Wednesday" [ label = "public-transport:has_day" ];
+	"public-transport:Normal" -> "public-transport:Tuesday" [ label = "public-transport:has_day" ];
+	"public-transport:Normal" -> "public-transport:Thursday" [ label = "public-transport:has_day" ];
+	"public-transport:Normal" -> "public-transport:Monday" [ label = "public-transport:has_day" ];
+	"public-transport:Normal" -> "public-transport:Friday" [ label = "public-transport:has_day" ];
+	"public-transport:has_day" -> "public-transport:has_stop" [ label = "rdfs:subPropertyOf" ];
+	"public-transport:text_color" -> "public-transport:color" [ label = "rdfs:subPropertyOf" ];
+	"http://www.semanticweb.org/thibault/ontologies/2016/0/public-transport#370" -> "http://www.semanticweb.org/thibault/ontologies/2016/0/public-transport#370" [ label = "public-transport:has_stop" ];
+	"public-transport:short_name" -> "public-transport:name" [ label = "rdfs:subPropertyOf" ];
+	"public-transport:end_date" -> "public-transport:start_date" [ label = "rdfs:subPropertyOf" ];
+	"http://www.semanticweb.org/thibault/ontologies/2016/0/public-transport#1013825" -> "public-transport:Normal" [ label = "public-transport:has_service" ];
+	"http://www.semanticweb.org/thibault/ontologies/2016/0/public-transport#1013825" -> "public-transport:inbound" [ label = "public-transport:has_direction" ];
+	"public-transport:Holiday" -> "public-transport:Sunday" [ label = "public-transport:has_day" ];
+	"public-transport:Holiday" -> "public-transport:Saturday" [ label = "public-transport:has_day" ];
+	"public-transport:start_date" -> "public-transport:id" [ label = "rdfs:subPropertyOf" ];
+	"public-transport:long_name" -> "public-transport:name" [ label = "rdfs:subPropertyOf" ];
+	"public-transport:to" -> "public-transport:from" [ label = "rdfs:subPropertyOf" ];
+	"public-transport:from" -> "public-transport:has_day" [ label = "rdfs:subPropertyOf" ];
+	"public-transport:Transfer" -> "public-transport:Stop" [ label = "public-transport:from" ];
+	"public-transport:Trip" -> "public-transport:Route" [ label = "public-transport:part_of_route" ];
+	"public-transport:Route" -> "xsd:string" [ label = "public-transport:short_name" ];
+	"public-transport:Service" -> "public-transport:customDate" [ label = "public-transport:end_date" ];
+	"public-transport:Stop" -> "xsd:string" [ label = "public-transport:name" ];
+	"public-transport:Route" -> "xsd:string" [ label = "public-transport:color" ];
+	"public-transport:Route" -> "xsd:string" [ label = "public-transport:long_name" ];
+	"public-transport:Service" -> "public-transport:Day" [ label = "public-transport:has_day" ];
+	"public-transport:StopTime" -> "public-transport:Trip" [ label = "public-transport:has_trip" ];
+	"public-transport:Route" -> "xsd:unsignedLong" [ label = "public-transport:id" ];
+	"public-transport:StopTime" -> "public-transport:Stop" [ label = "public-transport:has_stop" ];
+	"public-transport:Stop" -> "xsd:decimal" [ label = "public-transport:longitude" ];
+	"public-transport:Trip" -> "public-transport:Service" [ label = "public-transport:has_service" ];
+	"public-transport:Trip" -> "public-transport:TransportType" [ label = "public-transport:has_transport_type" ];
+	"public-transport:Transfer" -> "public-transport:Stop" [ label = "public-transport:to" ];
+	"public-transport:Trip" -> "public-transport:Direction" [ label = "public-transport:has_direction" ];
+	"public-transport:Transfer" -> "public-transport:TransferType" [ label = "public-transport:has_transfer_type" ];
+	"public-transport:StopTime" -> "public-transport:customTime" [ label = "public-transport:arrival_time" ];
+	"public-transport:Service" -> "public-transport:customDate" [ label = "public-transport:start_date" ];
+	"public-transport:StopTime" -> "public-transport:customTime" [ label = "public-transport:departure_time" ];
+	"public-transport:Route" -> "xsd:string" [ label = "public-transport:text_color" ];
+	"public-transport:Stop" -> "xsd:decimal" [ label = "public-transport:latitude" ];
+	"public-transport:Route" -> "xsd:string" [ label = "public-transport:description" ];
+	"public-transport:StopTime" -> "xsd:nonNegativeInteger" [ label = "public-transport:stop_sequence" ];
+	"public-transport:Transfer" -> "xsd:positiveInteger" [ label = "public-transport:min_transfer_time" ];
+
+}

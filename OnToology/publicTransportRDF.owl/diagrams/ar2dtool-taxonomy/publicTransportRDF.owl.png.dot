@@ -1,0 +1,27 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "public-transport:TransportType" "public-transport:Thursday" "public-transport:Day" "public-transport:TimedTransfer" "public-transport:ImmediateTransfer" "public-transport:inbound_travel" "public-transport:TramType" "public-transport:RailType" "public-transport:GondolaType" "public-transport:Direction" "public-transport:FunicularType" "public-transport:TransferType" "public-transport:Sunday" "public-transport:Friday" "public-transport:Monday" "public-transport:RecommendedTransfer" "public-transport:FerryType" "public-transport:outbound_travel" "public-transport:CableCarType" "public-transport:Saturday" "public-transport:BusType" "public-transport:Wednesday" "public-transport:ImpossibleTransfer" "public-transport:MetroType" "public-transport:Tuesday" ; /*classes style*/
+	"public-transport:Friday" -> "public-transport:Day" [ label = "rdfs:subClassOf" ];
+	"public-transport:inbound_travel" -> "public-transport:Direction" [ label = "rdfs:subClassOf" ];
+	"public-transport:FunicularType" -> "public-transport:TransportType" [ label = "rdfs:subClassOf" ];
+	"public-transport:Sunday" -> "public-transport:Day" [ label = "rdfs:subClassOf" ];
+	"public-transport:Wednesday" -> "public-transport:Day" [ label = "rdfs:subClassOf" ];
+	"public-transport:Thursday" -> "public-transport:Day" [ label = "rdfs:subClassOf" ];
+	"public-transport:TramType" -> "public-transport:TransportType" [ label = "rdfs:subClassOf" ];
+	"public-transport:GondolaType" -> "public-transport:TransportType" [ label = "rdfs:subClassOf" ];
+	"public-transport:BusType" -> "public-transport:TransportType" [ label = "rdfs:subClassOf" ];
+	"public-transport:Tuesday" -> "public-transport:Day" [ label = "rdfs:subClassOf" ];
+	"public-transport:Saturday" -> "public-transport:Day" [ label = "rdfs:subClassOf" ];
+	"public-transport:outbound_travel" -> "public-transport:Direction" [ label = "rdfs:subClassOf" ];
+	"public-transport:Monday" -> "public-transport:Day" [ label = "rdfs:subClassOf" ];
+	"public-transport:RailType" -> "public-transport:TransportType" [ label = "rdfs:subClassOf" ];
+	"public-transport:MetroType" -> "public-transport:TransportType" [ label = "rdfs:subClassOf" ];
+	"public-transport:TimedTransfer" -> "public-transport:TransferType" [ label = "rdfs:subClassOf" ];
+	"public-transport:FerryType" -> "public-transport:TransportType" [ label = "rdfs:subClassOf" ];
+	"public-transport:RecommendedTransfer" -> "public-transport:TransferType" [ label = "rdfs:subClassOf" ];
+	"public-transport:ImmediateTransfer" -> "public-transport:TransferType" [ label = "rdfs:subClassOf" ];
+	"public-transport:CableCarType" -> "public-transport:TransportType" [ label = "rdfs:subClassOf" ];
+	"public-transport:ImpossibleTransfer" -> "public-transport:TransferType" [ label = "rdfs:subClassOf" ];
+
+}
