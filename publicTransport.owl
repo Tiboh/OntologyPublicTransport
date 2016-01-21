@@ -16,19 +16,25 @@
         <Class IRI="#BusType"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Holiday"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Route"/>
     </Declaration>
     <Declaration>
         <Class IRI="#MetroType"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#GondolaType"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="#has_service"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#GondolaType"/>
+    </Declaration>
+    <Declaration>
         <Datatype IRI="#customTime"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Monday"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#id"/>
@@ -37,10 +43,13 @@
         <Class IRI="#CableCarType"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#RailType"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#text_color"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#RailType"/>
+        <NamedIndividual IRI="#Olympiades-Bibliotheque"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#longitude"/>
@@ -49,10 +58,22 @@
         <DataProperty IRI="#color"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Wednesday"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#long_name"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Transfer"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#inbound"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ImmediateTransfer"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Saturday"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Direction"/>
@@ -67,10 +88,10 @@
         <DataProperty IRI="#end_date"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Saturday"/>
+        <Class IRI="#FunicularType"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#FunicularType"/>
+        <Class IRI="#Saturday"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Sunday"/>
@@ -82,13 +103,13 @@
         <Class IRI="#TransferType"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#part_of_route"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#has_trip"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#has_transport_type"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#part_of_route"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Day"/>
@@ -107,6 +128,12 @@
     </Declaration>
     <Declaration>
         <Class IRI="#TramType"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sunday"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#outbound"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Friday"/>
@@ -145,16 +172,34 @@
         <ObjectProperty IRI="#has_direction"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#StopTime"/>
+        <NamedIndividual IRI="#10000872820081804"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#to"/>
+        <Class IRI="#StopTime"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#from"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#to"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Bibliotheque-Francois_Mitterrand"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#1013825"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Olympiades"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Thursday"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#ImmediateTransfer"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Tuesday"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#has_stop"/>
@@ -169,16 +214,28 @@
         <Class IRI="#Thursday"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Friday"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Normal"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#TimedTransfer"/>
     </Declaration>
     <Declaration>
         <Class IRI="#RecommendedTransfer"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Stop"/>
+        <NamedIndividual IRI="#BusType"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#370"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Tuesday"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Stop"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#stop_sequence"/>
@@ -270,6 +327,257 @@
         <Class IRI="#outbound_travel"/>
         <Class IRI="#Direction"/>
     </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Stop"/>
+        <NamedIndividual IRI="#Bibliotheque-Francois_Mitterrand"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BusType"/>
+        <NamedIndividual IRI="#BusType"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Friday"/>
+        <NamedIndividual IRI="#Friday"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Service"/>
+        <NamedIndividual IRI="#Holiday"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ImmediateTransfer"/>
+        <NamedIndividual IRI="#ImmediateTransfer"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Monday"/>
+        <NamedIndividual IRI="#Monday"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Service"/>
+        <NamedIndividual IRI="#Normal"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Stop"/>
+        <NamedIndividual IRI="#Olympiades"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Transfer"/>
+        <NamedIndividual IRI="#Olympiades-Bibliotheque"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Saturday"/>
+        <NamedIndividual IRI="#Saturday"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Sunday"/>
+        <NamedIndividual IRI="#Sunday"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Thursday"/>
+        <NamedIndividual IRI="#Thursday"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Tuesday"/>
+        <NamedIndividual IRI="#Tuesday"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Wednesday"/>
+        <NamedIndividual IRI="#Wednesday"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#inbound_travel"/>
+        <NamedIndividual IRI="#inbound"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#outbound_travel"/>
+        <NamedIndividual IRI="#outbound"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#StopTime"/>
+        <NamedIndividual IRI="#10000872820081804"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Trip"/>
+        <NamedIndividual IRI="#1013825"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Route"/>
+        <NamedIndividual IRI="#370"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_day"/>
+        <NamedIndividual IRI="#Holiday"/>
+        <NamedIndividual IRI="#Saturday"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_day"/>
+        <NamedIndividual IRI="#Holiday"/>
+        <NamedIndividual IRI="#Sunday"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_day"/>
+        <NamedIndividual IRI="#Normal"/>
+        <NamedIndividual IRI="#Friday"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_day"/>
+        <NamedIndividual IRI="#Normal"/>
+        <NamedIndividual IRI="#Monday"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_day"/>
+        <NamedIndividual IRI="#Normal"/>
+        <NamedIndividual IRI="#Thursday"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_day"/>
+        <NamedIndividual IRI="#Normal"/>
+        <NamedIndividual IRI="#Tuesday"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_day"/>
+        <NamedIndividual IRI="#Normal"/>
+        <NamedIndividual IRI="#Wednesday"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#from"/>
+        <NamedIndividual IRI="#Olympiades-Bibliotheque"/>
+        <NamedIndividual IRI="#Olympiades"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_transfer_type"/>
+        <NamedIndividual IRI="#Olympiades-Bibliotheque"/>
+        <NamedIndividual IRI="#ImmediateTransfer"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#to"/>
+        <NamedIndividual IRI="#Olympiades-Bibliotheque"/>
+        <NamedIndividual IRI="#Bibliotheque-Francois_Mitterrand"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_stop"/>
+        <NamedIndividual IRI="#10000872820081804"/>
+        <NamedIndividual IRI="#370"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_direction"/>
+        <NamedIndividual IRI="#1013825"/>
+        <NamedIndividual IRI="#inbound"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_service"/>
+        <NamedIndividual IRI="#1013825"/>
+        <NamedIndividual IRI="#Normal"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_stop"/>
+        <NamedIndividual IRI="#370"/>
+        <NamedIndividual IRI="#370"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id"/>
+        <NamedIndividual IRI="#Bibliotheque-Francois_Mitterrand"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1166826</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#end_date"/>
+        <NamedIndividual IRI="#Holiday"/>
+        <Literal datatypeIRI="http://www.semanticweb.org/thibault/ontologies/2016/0/public-transport#customDate">20160705</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#start_date"/>
+        <NamedIndividual IRI="#Holiday"/>
+        <Literal datatypeIRI="http://www.semanticweb.org/thibault/ontologies/2016/0/public-transport#customDate">20160107</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#end_date"/>
+        <NamedIndividual IRI="#Normal"/>
+        <Literal datatypeIRI="http://www.semanticweb.org/thibault/ontologies/2016/0/public-transport#customDate">20160703</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#start_date"/>
+        <NamedIndividual IRI="#Normal"/>
+        <Literal datatypeIRI="http://www.semanticweb.org/thibault/ontologies/2016/0/public-transport#customDate">20160109</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#description"/>
+        <NamedIndividual IRI="#Olympiades"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">91 rue de Tolbiac - 75113</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id"/>
+        <NamedIndividual IRI="#Olympiades"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1166824</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#latitude"/>
+        <NamedIndividual IRI="#Olympiades"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">48.82694828196076</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#longitude"/>
+        <NamedIndividual IRI="#Olympiades"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">2.367038433387592</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#short_name"/>
+        <NamedIndividual IRI="#Olympiades"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Olympiades</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#min_transfer_time"/>
+        <NamedIndividual IRI="#Olympiades-Bibliotheque"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">243</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#arrival_time"/>
+        <NamedIndividual IRI="#10000872820081804"/>
+        <Literal datatypeIRI="http://www.semanticweb.org/thibault/ontologies/2016/0/public-transport#customTime">17:33:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#departure_time"/>
+        <NamedIndividual IRI="#10000872820081804"/>
+        <Literal datatypeIRI="http://www.semanticweb.org/thibault/ontologies/2016/0/public-transport#customTime">17:33:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id"/>
+        <NamedIndividual IRI="#10000872820081804"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">10000872820081804</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id"/>
+        <NamedIndividual IRI="#1013825"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1020252010986313</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#short_name"/>
+        <NamedIndividual IRI="#1013825"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#color"/>
+        <NamedIndividual IRI="#370"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FFFFFF</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id"/>
+        <NamedIndividual IRI="#370"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1013825</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#long_name"/>
+        <NamedIndividual IRI="#370"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">(VILLIERS LE BEL ARNOUVILLE RER &lt;-&gt; VILLIERS LE BEL ARNOUVILLE RER.) - Aller</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#short_name"/>
+        <NamedIndividual IRI="#370"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">370</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#text_color"/>
+        <NamedIndividual IRI="#370"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">000000</Literal>
+    </DataPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#from"/>
         <ObjectProperty IRI="#has_day"/>
